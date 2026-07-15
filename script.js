@@ -8,6 +8,7 @@ let stop;
 
 
 play.addEventListener("click", () => {
+     if (stop) return;
 
      stop = setInterval(() => {
     num.innerHTML = count;
@@ -21,6 +22,7 @@ play.addEventListener("click", () => {
         num.innerHTML = "Time's Up"
         console.log("Time's up");
         num.style.fontSize = "60px";
+        return;
     }
 
 }, 1000);
